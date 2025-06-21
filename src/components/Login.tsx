@@ -29,15 +29,12 @@ export const Login = () => {
   };
   const handleSubmit = () => {
     const isEmailValid = checkEmail(email.current?.value || '');
-    const isPasswordValid = checkPassword(password.current?.value || '');
+
     if (!isEmailValid) {
       setErrorMessage('Email is not valid');
       return;
     }
-    if (!isPasswordValid) {
-      setErrorMessage('Password is not valid');
-      return;
-    }
+
     if (!isSignInForm) {
       if (email.current && password.current) {
         createUserWithEmailAndPassword(auth, email.current.value, password.current.value)

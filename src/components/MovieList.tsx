@@ -1,6 +1,5 @@
-import React from 'react';
 import { MovieCard } from './MovieCard';
-
+import './MovieList.css';
 export interface MovieListProps {
   movieTitle: string;
   moviesData:
@@ -16,7 +15,7 @@ export const MovieList = ({ movieTitle, moviesData }: MovieListProps) => {
   return (
     <div>
       <h1 className="my-2 text-xl font-bold text-white">{movieTitle}</h1>
-      <div className="w-scren flex overflow-x-scroll">
+      <div className="no-scrollbar flex overflow-x-auto">
         {moviesData && moviesData.length > 0 ? (
           <div className="flex gap-2">
             {moviesData?.map((movie, index) => (

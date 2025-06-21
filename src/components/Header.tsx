@@ -61,7 +61,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="absolute z-10 flex w-screen justify-between bg-gradient-to-b from-black px-8 py-2">
+    <div className="absolute z-10 flex w-full justify-between bg-gradient-to-b from-black px-8 py-2">
       <img className="w-44 font-extrabold" src={NetflixLogo} />
       {user && (
         <div className="flex items-center gap-2">
@@ -80,7 +80,7 @@ export const Header = () => {
           >
             {gptSearch ? 'Home' : 'GPT Search'}
           </button>
-          <img alt="user-logo" src={user.photoURL} className="h-10 w-10 rounded-2xl" />
+          {/* <img alt="user-logo" src={user.photoURL} className="h-10 w-10 rounded-2xl" /> */}
           <button className="cursor-pointer font-bold text-white" onClick={handleButtonClick}>
             Sign out
           </button>
